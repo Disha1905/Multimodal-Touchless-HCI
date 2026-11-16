@@ -1,0 +1,11 @@
+﻿.venv*
+venv*
+__pycache__/
+*.pyc
+.pytest_cache/
+.idea/
+dist/
+build/
+*.spec
+user_data/access.json
+user_data/tessdata/

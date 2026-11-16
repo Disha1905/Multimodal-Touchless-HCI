@@ -1,0 +1,33 @@
+Trials: 33   Overall accuracy: 81.8%
+
+Per-class results:
+gesture          prec  recall     f1    n
+C1               0.75    1.00   0.86    3
+C2               1.00    1.00   1.00    3
+C3               0.67    0.67   0.67    3
+C4               1.00    1.00   1.00    3
+cursor           1.00    0.67   0.80    3
+drag             1.00    1.00   1.00    3
+left_click       1.00    1.00   1.00    3
+neutral          1.00    1.00   1.00    3
+none             0.00    0.00   0.00    0
+right_click      1.00    0.67   0.80    3
+scroll_down      0.50    0.67   0.57    3
+scroll_up        1.00    0.33   0.50    3
+
+Confusion matrix (rows = true, cols = predicted):
+                    C1      C2      C3      C4  cursor    drag left_cl neutral    none right_c scroll_ scroll_
+C1                   3       0       0       0       0       0       0       0       0       0       0       0
+C2                   0       3       0       0       0       0       0       0       0       0       0       0
+C3                   0       0       2       0       0       0       0       0       1       0       0       0
+C4                   0       0       0       3       0       0       0       0       0       0       0       0
+cursor               0       0       0       0       2       0       0       0       1       0       0       0
+drag                 0       0       0       0       0       3       0       0       0       0       0       0
+left_click           0       0       0       0       0       0       3       0       0       0       0       0
+neutral              0       0       0       0       0       0       0       3       0       0       0       0
+none                 0       0       0       0       0       0       0       0       0       0       0       0
+right_click          1       0       0       0       0       0       0       0       0       2       0       0
+scroll_down          0       0       1       0       0       0       0       0       0       0       2       0
+scroll_up            0       0       0       0       0       0       0       0       0       0       2       1
+
+Latency (gesture start -> stable recognition): {'n': 29, 'mean_ms': 151.9655172413793, 'median_ms': 117.0, 'p95_ms': 406.0, 'stdev_ms': 87.09744157081043}

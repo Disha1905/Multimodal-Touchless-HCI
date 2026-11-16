@@ -1,0 +1,6 @@
+lang,ocr_char_acc,tess_conf,ocr_ms,trans_ok,trans_prov,trans_ms
+eng,100.0%,95.7%,1134,True,n/a,0
+hin,98.4%,93.1%,243,True,Ollama (local),3716
+kan,95.8%,89.4%,210,True,Ollama (local),4444
+tam,85.0%,90.5%,244,True,Ollama (local),4036
+tel,95.9%,70.0%,288,True,Ollama (local),3993

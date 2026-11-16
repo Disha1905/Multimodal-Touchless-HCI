@@ -1,0 +1,40 @@
+hci_engine change log
+=====================
+
+v4  2026-11-16
+    - Smile feature removed (it had no clear purpose).
+    - Mouth-open easier and more reliable: hysteresis, progress bar on the preview, beep + banner when voice
+      starts or stops.
+    - Each camera frame is processed once (large CPU saving, less dashboard dimming).
+    - Settings reordered: media troubleshooting moved to an "Advanced" box at the bottom.
+
+v3  2026-11-15  Fixes from user testing
+    - Dashboard no longer fades/flickers every few seconds (Streamlit stale-element fade disabled; live panels
+      split into separate lightweight fragments; CPU sampling moved to a background thread; smaller preview;
+      face analysis runs every 2nd frame and without iris refinement).
+    - Dashboard fits the screen: compact layout, smaller base font, preview height tied to window height,
+      long help text moved into expanders.
+    - Screen AI: text language detected automatically (override under Advanced settings); the captured-window
+      preview now always renders; Read aloud + Stop speech for both the extracted text and the result.
+    - MAX Voice: 3-step layout, friendly window names, one Start/Stop button, Enable-control button on the same
+      tab, 'What I heard' log pairing each phrase with its result, grouped command list.
+    - Settings: media options moved under the Media profile with plain-language explanation and test buttons.
+    - Facial interaction: mouth-open easier to detect (about 0.8 s hold, lower threshold); starting/stopping voice
+      now plays a beep, shows a green/grey banner and a red MIC ON marker on the preview.
+    - Smile no longer triggers anything by default (optional play/pause in Settings).
+    - C3 gesture changed from thumb+middle to little finger only (easy to perform and detect).
+
+2026-11-15  Dashboard redesign: six tabs (Interaction modes, Screen AI, MAX Voice, Settings,
+            About & limitations, Account settings), dark navy theme.
+2026-11-15  Screen AI: captures the selected window's own pixels (PrintWindow) so it works even when the
+            dashboard covers it; Tesseract auto-detection; missing OCR language packs download on demand;
+            image preprocessing; AI provider settings; script-based language detection for Read aloud.
+2026-11-15  Facial interaction rebuilt: time-based holds, smoothing, head-turn guard, cooldowns,
+            smile = width + corner lift, adjustable sensitivity, live values, recalibrate button.
+2026-11-15  Media: system media keys sent with SendInput; optional keyboard-shortcut method for the target
+            window; test buttons in Settings. Keyboard shortcuts no longer land in the dashboard window
+            (focus is redirected to the last external window).
+2026-11-15  Drag now moves the cursor while held; previous tab uses Ctrl+PageUp.
+2026-11-15  MAX Voice: aliases/near-match for common mis-hearings, Indian-English recognition, push-to-talk.
+2026-11-15  Account settings: change username, change PIN, regenerate recovery code.
+2026-11-14  Initial release.
